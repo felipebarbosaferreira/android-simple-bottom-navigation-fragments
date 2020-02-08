@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_blog"
+        android:id="@+id/blogFragment"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Blogs" />
     <item
-        android:id="@+id/navigation_chapter"
+        android:id="@+id/chapterFragment"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Chapters" />
 
     <item
-        android:id="@+id/navigation_store"
+        android:id="@+id/storeFragment"
         android:icon="@drawable/ic_launcher_foreground"
         android:title="Android Store" />
 </menu>

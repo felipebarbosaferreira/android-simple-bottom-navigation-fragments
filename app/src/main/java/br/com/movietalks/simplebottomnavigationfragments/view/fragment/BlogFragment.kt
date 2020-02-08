@@ -1,14 +1,16 @@
 package br.com.movietalks.simplebottomnavigationfragments.view.fragment
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-
+import android.widget.Button
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import br.com.movietalks.simplebottomnavigationfragments.R
 import br.com.movietalks.simplebottomnavigationfragments.viewmodel.BlogViewModel
+
 
 class BlogFragment : Fragment() {
 
@@ -29,6 +31,12 @@ class BlogFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(BlogViewModel::class.java)
         // TODO: Use the ViewModel
+
+        val buttonBlogDetail: Button = view!!.findViewById(R.id.buttonBlogDetail) as Button
+        buttonBlogDetail.setOnClickListener(View.OnClickListener { goToDetailBlogFragment() })
     }
 
+    fun goToDetailBlogFragment() {
+        findNavController().navigate(R.id.blogDetailFragment)
+    }
 }
