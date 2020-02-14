@@ -17,7 +17,8 @@
         tools:layout="@layout/blog_fragment" >
         <action
             android:id="@+id/action_blogFragment_to_blogDetailFragment"
-            app:destination="@id/blogDetailFragment" />
+            app:destination="@id/blogDetailFragment"
+            app:enterAnim="@anim/fade_out" />
     </fragment>
     <fragment
         android:id="@+id/blogDetailFragment"
